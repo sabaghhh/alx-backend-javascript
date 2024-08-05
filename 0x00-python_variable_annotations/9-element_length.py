@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
-''' Description: Annotate the below function’s parameters and
-                 return values with the appropriate types
-    Arguments: lst: Iterable[Sequence]
-'''
+"""Annotate the below function’s parameters and return
+values with the appropriate types
 
-from typing import Iterable, Sequence, List, Tuple
+def element_length(lst):
+    return [(i, len(i)) for i in lst]
+
+{'lst': typing.Iterable[typing.Sequence], 'return': \
+    typing.List[typing.Tuple[typing.Sequence, int]]}
+"""
 
 
-def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
-    '''Return list of tuples, one for each element, of which
-       consists of the element itself and its length.
-    '''
+import typing
+
+
+def element_length(lst: typing.Iterable[typing.Sequence]) -> \
+        typing.List[typing.Tuple[typing.Sequence, int]]:
+    """Returns a list of tuples"""
     return [(i, len(i)) for i in lst]

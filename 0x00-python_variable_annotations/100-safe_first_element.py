@@ -1,14 +1,24 @@
 #!/usr/bin/env python3
-''' Description: Augment the following code with the correct
-                 duck-typed annotations
-    Arguments: lst: Sequence[Any]
-'''
+"""Augment the following code with the correct duck-typed annotations:
 
-from typing import Sequence, Any, Union
+# The types of the elements of the input are not know
+def safe_first_element(lst):
+    if lst:
+        return lst[0]
+    else:
+        return None
+
+{'lst': typing.Sequence[typing.Any], 'return': \
+    typing.Union[typing.Any, NoneType]}
+"""
 
 
-def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
-    ''' Return the first element of lst if there is any, otherwise None. '''
+import typing
+
+
+def safe_first_element(lst: typing.Sequence[typing.Any]) -> \
+        typing.Union[typing.Any, None]:
+    """Duck-typed annotation"""
     if lst:
         return lst[0]
     else:
