@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
-"""Write a type-annotated function floor which takes a float
-n as argument and returns the floor of the float.
-"""
+"""Type-annotated function floor"""
 
 
 def floor(n: float) -> int:
-    """Returns the floor of the float"""
+    """Returns floor of a float passed to it"""
     return int(n)
